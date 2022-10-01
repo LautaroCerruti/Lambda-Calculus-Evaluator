@@ -14,8 +14,12 @@ import           Untyped
 -- Ejercicio 1
 ----------------------------------------------
 
+-- 0 = 
+
 num :: Integer -> LamTerm
-num = undefined
+num = \n -> Abs "s" (Abs "z" (aux n))
+      where aux 0 = LVar "z"
+            aux n = App (LVar "s") (aux (n-1))
 
 -------------------------------------------------
 -- Parser de Lambda Cálculo (Gramatica Extendida) 
