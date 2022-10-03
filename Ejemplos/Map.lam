@@ -1,0 +1,18 @@
+-- Primer Implementacion de Map
+def length = \xs. xs (\x n. suc n) zero
+
+def reverseAux = Y (\rev xs ys. (isnil xs) ys (rev (tail xs) (cons (head xs) ys)))
+
+def reverse = \xs. reverseAux xs nil
+
+def fun = \f p. pair (cons (length (fst p) f (head (snd p))) (fst p)) (tail (snd p))
+
+def mapNAux = \f l. (length l) (fun f) (pair nil l)
+
+def mapN = \f l. reverse (fst (mapNAux f l))
+
+
+-- Segunda Implementacion de Map 
+def mapN2Aux = Y (\map f l n. (isnil l) nil (cons (n f (head l)) (map f (tail l) (suc n))))
+
+def mapN2 = \f l. mapN2Aux f l zero
