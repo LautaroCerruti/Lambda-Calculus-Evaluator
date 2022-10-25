@@ -1,4 +1,4 @@
-# TP 2 - ALP - 2020
+# TP 2 - ALP - 2022
 
 ## Introducción
 Hola! Este README es un documento complementario al PDF de la consigna del TP. Para este trabajo no van a necesitar nada nuevo, solamente se repiten las intrucciones básicas de `stack`. Si hicieron el TP1, lo único que les va a ser útil  es la sección **Estructura del código**.
